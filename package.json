@@ -1,0 +1,49 @@
+{
+  "name": "react-16puzzle",
+  "version": "0.1.0",
+  "description": "simple 16 puzzle",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "cross-env NODE_ENV=test mocha --recursive --compilers js:babel-register",
+    "css:build": "node-sass site/ui/scss -o tmp && postcss --use autoprefixer -d static/css tmp/*.css",
+    "css:watch": "nodemon -e .scss -x \"npm run css:build\""
+  },
+  "author": "Fuji Haruka",
+  "dependencies": {
+    "react": "^15.0.2",
+    "react-dom": "^15.0.1",
+    "react-redux": "^4.4.4",
+    "react-router": "^2.4.0",
+    "redux": "^3.4.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-core": "^6.3.15",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-register": "^6.3.13",
+    "cross-env": "^1.0.7",
+    "enzyme": "^2.0.0",
+    "expect": "^1.6.0",
+    "express": "^4.13.3",
+    "express-history-api-fallback": "^2.0.0",
+    "mocha": "^2.2.5",
+    "node-libs-browser": "^0.5.2",
+    "node-sass": "^3.5.3",
+    "nodemon": "^1.9.1",
+    "postcss-cli": "^2.5.1",
+    "postcss-loader": "^0.8.2",
+    "precss": "^1.4.0",
+    "react-addons-test-utils": "^0.14.7",
+    "webpack": "^1.9.11",
+    "webpack-dev-middleware": "^1.2.0",
+    "webpack-hot-middleware": "^2.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FujiHaruka/react-16puzzle.git"
+  }
+}
