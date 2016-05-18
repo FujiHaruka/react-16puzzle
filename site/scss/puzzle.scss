@@ -1,3 +1,7 @@
+// const
+$piece-size: 155px;
+$board-size: $piece-size * 4;
+
 // mixin
 
 @mixin button() {
@@ -5,8 +9,39 @@
   cursor: pointer;
 }
 
+@mixin size($size) {
+  width: $size;
+  height: $size;
+}
+
 // puzzle style
 
-puzzle {
-  color: #666;
+.puzzle {
+  color: #666; }
+
+.puzzle-board {
+  cursor: pointer;
+  margin: auto;
+  margin-bottom: 50px;
+  padding: 0;
+  box-sizing: content-box;
+  border: 2px solid #aaa;
+  display: flex;
+  flex-wrap: wrap;
+  @include size($board-size);
+}
+
+.piece {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #666;
+  box-sizing: border-box;
+  @include size($piece-size);
+}
+
+.piece-img {
+  position: absolute;
+  @include size($board-size);
 }
