@@ -4,3 +4,5 @@ log
 *.log
 tmp
 tmp.*
+static/js
+static/css

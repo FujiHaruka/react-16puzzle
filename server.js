@@ -2,7 +2,6 @@
 const webpack = require('webpack')
 const webpackDevMiddleware = require('webpack-dev-middleware')
 const webpackHotMiddleware = require('webpack-hot-middleware')
-const fallback = require('express-history-api-fallback')
 const config = require('./webpack.config')
 const Express = require('express')
 
@@ -13,7 +12,6 @@ let compiler = webpack(config)
 app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }))
 app.use(webpackHotMiddleware(compiler))
 app.use(Express.static('static'))
-app.use(fallback(__dirname + '/static/index.html'))
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/static/index.html')

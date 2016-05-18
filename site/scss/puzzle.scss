@@ -1,0 +1,12 @@
+// mixin
+
+@mixin button() {
+  user-select: none;
+  cursor: pointer;
+}
+
+// puzzle style
+
+puzzle {
+  color: #666;
+}

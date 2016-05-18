@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "cross-env NODE_ENV=test mocha --recursive --compilers js:babel-register",
-    "css:build": "node-sass site/ui/scss -o tmp && postcss --use autoprefixer -d static/css tmp/*.css",
+    "css:build": "node-sass site/scss -o tmp && postcss --use autoprefixer -d static/css tmp/*.css",
     "css:watch": "nodemon -e .scss -x \"npm run css:build\""
   },
   "author": "Fuji Haruka",
@@ -14,7 +14,6 @@
     "react": "^15.0.2",
     "react-dom": "^15.0.1",
     "react-redux": "^4.4.4",
-    "react-router": "^2.4.0",
     "redux": "^3.4.0"
   },
   "devDependencies": {
