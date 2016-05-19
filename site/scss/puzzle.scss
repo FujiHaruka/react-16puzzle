@@ -25,16 +25,17 @@ $board-size: $piece-size * 4;
   margin-bottom: 50px;
   padding: 0;
   box-sizing: content-box;
-  border: 2px solid #aaa;
-  display: flex;
-  flex-wrap: wrap;
+  border: 1px solid #aaa;
+  position: relative;
   @include size($board-size);
 }
 
 .piece {
+  box-sizing: border-box;
+  border: 1px solid #aaa;
   margin: 0;
   padding: 0;
-  position: relative;
+  position: absolute;
   overflow: hidden;
   border: 1px solid #666;
   box-sizing: border-box;
