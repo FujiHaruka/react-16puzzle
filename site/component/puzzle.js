@@ -4,7 +4,14 @@ import Piece from './piece'
 
 const Puzzle = React.createClass({
   propTypes: {
-    initialArrangement: React.PropTypes.string
+    initialArrangement: React.PropTypes.string,
+    ids: React.PropTypes.array
+  },
+
+  getDefaultProps () {
+    return {
+      ids: Util.incrementalNumbers(1, 15)
+    }
   },
 
   getInitialState () {
@@ -16,8 +23,7 @@ const Puzzle = React.createClass({
   },
 
   render () {
-    let ids = Util.incrementalNumbers(1, 15)
-    console.log(this.state.arrangement)
+    let {ids} = this.props
     return (
       <div className='puzzle'>
         <div className='puzzle-board'>
@@ -31,6 +37,12 @@ const Puzzle = React.createClass({
         </div>
       </div>
     )
+  },
+
+  componentDidUpdate () {
+    if (this.isCongratulation()) {
+      window.alert('congratulation')
+    }
   },
 
   onClickPiece (event) {
@@ -69,6 +81,12 @@ const Puzzle = React.createClass({
     this.setState({
       arrangement: swapped
     })
+  },
+
+  isCongratulation () {
+    let {ids} = this.props
+    let {arrangement} = this.state
+    return ids.every((number, i) => number === arrangement[i])
   }
 })
 
