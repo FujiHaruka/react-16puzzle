@@ -1,4 +1,4 @@
-function incrementalArray (initialNumber, length) {
+function incrementalNumbers (initialNumber, length) {
   let array = Array(length)
   for (let i = 0; i < length; i++) {
     array[i] = initialNumber + i
@@ -7,7 +7,7 @@ function incrementalArray (initialNumber, length) {
 }
 
 const Util = {
-  incrementalArray
+  incrementalNumbers
 }
 
 export default Util

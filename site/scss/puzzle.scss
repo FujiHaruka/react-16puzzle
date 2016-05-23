@@ -39,6 +39,7 @@ $board-size: $piece-size * 4;
   overflow: hidden;
   border: 1px solid #666;
   box-sizing: border-box;
+  transition: all 0.3s ease;
   @include size($piece-size);
 }
 
