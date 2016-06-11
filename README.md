@@ -1,2 +1,3 @@
-# react-16puzzle
-16 puzzle created on React.js
+# 16 パズル
+
+React.js を練習したかった。

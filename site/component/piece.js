@@ -15,7 +15,7 @@ const Piece = React.createClass({
     let position = this.getPositionStyle()
     return (
       <div className='piece' style={position} data={pieceId} onClick={this.props.onClick}>
-        <img className='piece-img' src='./img/flower.jpg' style={view}/>
+        <img className='piece-img' src='./img/cat.jpg' style={view}/>
       </div>
     )
   },

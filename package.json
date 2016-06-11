@@ -2,12 +2,12 @@
   "name": "react-16puzzle",
   "version": "0.1.0",
   "description": "simple 16 puzzle",
-  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "test": "cross-env NODE_ENV=test mocha --recursive --compilers js:babel-register",
-    "css:build": "node-sass site/scss -o tmp && postcss --use autoprefixer -d static/css tmp/*.css",
-    "css:watch": "nodemon -e .scss -x \"npm run css:build\""
+    "css:build": "node-sass site/scss -o tmp && postcss --use autoprefixer -d public/css tmp/*.css",
+    "css:watch": "nodemon -e .scss -x \"npm run css:build\"",
+    "deploy": "git subtree push --prefix public/ origin gh-pages"
   },
   "author": "Fuji Haruka",
   "dependencies": {

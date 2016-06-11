@@ -11,10 +11,10 @@ let port = 3000
 let compiler = webpack(config)
 app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }))
 app.use(webpackHotMiddleware(compiler))
-app.use(Express.static('static'))
+app.use(Express.static('public'))
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/static/index.html')
+  res.sendFile(__dirname + '/public/index.html')
 })
 
 app.listen(port, error => {

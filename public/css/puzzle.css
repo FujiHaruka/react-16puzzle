@@ -1,0 +1,32 @@
+.puzzle {
+  color: #666; }
+
+.puzzle-board {
+  cursor: pointer;
+  margin: auto;
+  margin-bottom: 50px;
+  padding: 0;
+  box-sizing: content-box;
+  border: 1px solid #aaa;
+  position: relative;
+  width: 620px;
+  height: 620px; }
+
+.piece {
+  box-sizing: border-box;
+  border: 1px solid #aaa;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+  border: 1px solid #666;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 155px;
+  height: 155px; }
+
+.piece-img {
+  position: absolute;
+  width: 620px;
+  height: 620px; }
