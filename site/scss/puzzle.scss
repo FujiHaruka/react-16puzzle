@@ -47,3 +47,9 @@ $board-size: $piece-size * 4;
   position: absolute;
   @include size($board-size);
 }
+
+// uploader style
+.uploader {
+  width: 640px;
+  margin: auto;
+}

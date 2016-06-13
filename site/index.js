@@ -1,14 +1,17 @@
 import React from 'react'
 import { render } from 'react-dom'
-import Header from './component/header'
+import App from './component/app'
 import Puzzle from './component/puzzle'
+import Uploader from './component/uploader'
+import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 
 const rootEl = document.getElementById('puzzle')
-let puzzleData = '7d41fac90eb32658'
 
 render((
-  <div className='container-all'>
-    <Header />
-    <Puzzle initialArrangement={puzzleData}/>
-  </div>
+  <Router history={browserHistory}>
+    <Route path='/' component={App}>
+      <IndexRoute component={Puzzle} />
+      <Route path='/upload' component={Uploader} />
+    </Route>
+  </Router>
 ), rootEl)

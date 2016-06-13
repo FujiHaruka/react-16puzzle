@@ -10,7 +10,8 @@ const Puzzle = React.createClass({
 
   getDefaultProps () {
     return {
-      ids: Util.incrementalNumbers(1, 15)
+      ids: Util.incrementalNumbers(1, 15),
+      initialArrangement: '7d41fac90eb32658'
     }
   },
 
